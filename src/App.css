@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.md\:flex {
+  @screen md {
+    display: flex;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,41 +30,8 @@
   margin-top: 2rem;
 }
 
-/* Navbar */
-
-.navbar {
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--clr-main);
-  border-bottom: 3px solid black;
-}
-
-.logo {
-  text-decoration: none;
-  color: black;
-}
-
-.menu {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.menu-link {
-  text-decoration: none;
-  color: black;
-  font-size: 1.2rem;
-}
-
-.menu-link:hover {
-  text-decoration: underline;
-}
-
 /* Productos */
-
+/*
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,7 +89,7 @@
 .producto-detalle-info h3 {
   font-size: 2rem;
 }
-
+*/
 /* Detail */
 
 .categoria {

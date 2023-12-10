@@ -7,7 +7,7 @@ const ItemList = ({ productos, titulo }) => {
         <div className="container">
             <h2 className="main-title">{toCapital(titulo)}</h2>
 
-            <div className="productos">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 productos">
                 {productos.map((prod) => <Item producto={prod} key={prod.id} />)}
             </div>
         </div>

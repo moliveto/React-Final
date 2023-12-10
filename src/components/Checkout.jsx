@@ -43,9 +43,9 @@ const Checkout = () => {
             <h1 className="main-title">Finalizar compra</h1>
             <form className="formulario" onSubmit={handleSubmit(comprar)}>
 
-                <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
-                <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
-                <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
+                <input type="text" required className="form-input px-4 py-3 rounded-full" placeholder="Ingresá tu nombre" {...register("nombre")} />
+                <input type="email" required className="form-input px-4 py-3 rounded-full" placeholder="Ingresá tu e-mail" {...register("email")} />
+                <input type="phone" required className="form-input px-4 py-3 rounded-full" placeholder="Ingresá tu teléfono" {...register("telefono")} />
 
                 <button className="enviar" type="submit">Comprar</button>
 
