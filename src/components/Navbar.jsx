@@ -1,51 +1,54 @@
-import * as React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from "./CartWidget";
 
 const Navbar = () => {
     return (
-        <header className="relative">
-            <nav className="header sticky top-0 flex items-center justify-between flex-wrap bg-white py-4 lg:px-12 shadow shadow-md border-solid border-t-2">
-                <h1 className="w-3/12">
-                    <Link className="menu-link font-bold text-xl" to="/">
-                        Tienda Mia
-                    </Link>
-                </h1>
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid">
+                <Link className="navbar-brand" to="/">
+                    Mi Tienda
+                </Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/products">
+                                Productos
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/products/Almacen">
+                                Almacen
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/products/Bebidas">
+                                Bebidas
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/aboutus">
+                                Nosotros
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact">
+                                Contacto
+                            </Link>
+                        </li>
+                    </ul>
 
-                <ul className="flex items-center hidden md:flex space-x-4">
-                    <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <Link className="menu-link" to="/products">
-                            Productos
-                        </Link>
-                    </li>
-                    <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <Link className="menu-link" to="/products/Almacen">
-                            Almacen
-                        </Link>
-                    </li>
-                    <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <Link className="menu-link" to="/products/Bebidas">
-                            Bebidas
-                        </Link>
-                    </li>
-                    <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <Link className="menu-link" to="/aboutus">
-                            Nosotros
-                        </Link>
-                    </li>
-                    <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <Link className="menu-link" to="/contact">
-                            Contacto
-                        </Link>
-                    </li>
-                </ul>
-
-                <div className="w-3/12 flex justify-end">
-                    <CartWidget />
+                    <ul>
+                        <CartWidget />
+                    </ul>
                 </div>
-            </nav>
-        </header>
-    );
-};
+            </div>
+        </nav >
 
-export default Navbar;
+    )
+}
+
+export default Navbar
