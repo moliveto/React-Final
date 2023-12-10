@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Rating = ({ rating }) => {
+const ItemRating = ({ rating }) => {
     const stars = [];
 
     for (let i = 0; i < rating; i++) {
-        stars.push(<div key={i} className="bi-star-fill"></div>);
+        stars.push(<i className="bi-star-fill"></i>);
     }
 
     return (
@@ -14,4 +14,4 @@ const Rating = ({ rating }) => {
     );
 };
 
-export default Rating
+export default ItemRating

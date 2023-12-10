@@ -1,0 +1,11 @@
+span.price {
+  color: #000;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+span.offer {
+  color: #ff0000;
+  font-size: 24px;
+  font-family: sans-serif;
+}
