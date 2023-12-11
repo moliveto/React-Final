@@ -4,7 +4,7 @@ const ItemRating = ({ rating }) => {
     const stars = [];
 
     for (let i = 0; i < rating; i++) {
-        stars.push(<i className="bi-star-fill"></i>);
+        stars.push(<i key={i} className="bi-star-fill"></i>);
     }
 
     return (

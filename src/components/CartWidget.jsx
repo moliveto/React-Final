@@ -20,7 +20,7 @@ const CartWidget = () => {
     }));
 
     return (
-        <div>
+        <div className="align-self-end">
             <Link className="menu-link" to="/cart">
                 <IconButton aria-label="cart">
                     <StyledBadge badgeContent={countInCart()} color="secondary">

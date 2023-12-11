@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { toCapital } from '../helpers/toCapital'
 import ItemRating from './ItemRating'
 import ItemPrice from './ItemPrice'
+import ItemMore from './ItemMore'
 import "./Item.css";
 
 const Item = ({ producto }) => {
 
     return (
-        <div className="col">
+        <div className="col producto">
             <div className="card border-secondary shadow-sm mb-3 my-1 mx-1">
                 <div className="row g-3">
                     <div className="col-md-12">
@@ -22,14 +21,9 @@ const Item = ({ producto }) => {
                             <h6>{producto.category}</h6>
                             <ItemPrice producto={producto} />
                             <small className="text-body-secondary">Stock {producto.stock}</small>
-                            {/* <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> */}
                         </div>
                     </div>
-                    <div className="card-footer p-1 pt-0 border-top-0 bg-transparent">
-                        <div className="text-center">
-                            <Link className="btn btn-secondary mt-auto ver-mas" to={`/item/${producto.id}`}>Ver más</Link>
-                        </div>
-                    </div>
+                    <ItemMore producto={producto} />
                 </div>
             </div>
         </div>

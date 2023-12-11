@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { toCapital } from "../helpers/toCapital"
-import ItemCount from "./ItemCount"
 import { CartContext } from "../context/CartContext";
+import AddItemButton from "./AddItemButton";
+import ItemQuantitySelector from "./ItemQuantitySelector"
 
 
 const ItemDetail = ({ item }) => {
@@ -40,34 +41,13 @@ const ItemDetail = ({ item }) => {
                         </div>
                     </div>
                     <div className="flex space-x-4 mb-6 text-sm font-medium">
-                        <ItemCount
-                            cantidad={cantidad}
-                            handleSumar={handleSumar}
-                            handleRestar={handleRestar}
-                            handleAgregar={() => { addToCart(item, cantidad) }}
-                        />
+                        <ItemQuantitySelector cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} />
+                        <AddItemButton cantidad={cantidad} handleAgregar={() => { addToCart(item, cantidad) }} />
                     </div>
                 </div>
             </div>
         </div >
 
-        // <div className="container">
-        //     <div className="item-detalle">
-        //         <img src={item.image} alt={item.name} className="max-w-full h-auto object-cover inset-0 rounded-md" />
-        //         <div>
-        //             <h3 className="titulo">{item.name}</h3>
-        //             <p className="descripcion">{item.brand}</p>
-        //             <p className="categoria">Categoría: {toCapital(item.brand)}</p>
-        //             <p className="precio">${item.price}</p>
-        //             <ItemCount
-        //                 cantidad={cantidad}
-        //                 handleSumar={handleSumar}
-        //                 handleRestar={handleRestar}
-        //                 handleAgregar={() => { addToCart(item, cantidad) }}
-        //             />
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

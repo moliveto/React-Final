@@ -1,12 +1,14 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
-  --clr-main: #e24c06;
-  --clr-main-light: #dd7b54;
+  --clr-main: #cce206;
+  --clr-main-light: #aae06b;
+  --clr-background: #343a40;
 }
 
 .container {
@@ -19,56 +21,55 @@
   margin-top: 2rem;
 }
 
+.navbar {
+  padding: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-main);
+  border-bottom: 3px solid black;
+}
+
+.navbar .cart-icon {
+  position: relative;
+}
+
+.navbar .badge {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-l,
-ol {
-  list-style: none;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-/* Ejemplo de estilos para el tema oscuro */
-.dark-theme {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-/* Ejemplo de estilos para botones en el tema oscuro */
-.dark-theme .btn {
-  background-color: #ffffff;
-  color: #333333;
-}
-
-/* Ejemplo de estilos para enlaces en el tema oscuro */
-.dark-theme a {
-  color: #00bfff; /* Color de enlace en el tema oscuro */
-}
-
-/* Estilos para botones de contorno en el tema oscuro */
-.dark-theme .btn-outline-dark {
-  border-color: #ffffff; /* Color del borde en el tema oscuro */
-  color: #ffffff; /* Color del texto en el tema oscuro */
-}
-
-/* Establece un fondo de botón oscuro para mayor contraste si es necesario */
-.dark-theme .btn-outline-dark {
-  background-color: #333333;
-}
-
-.dark-theme .badge.bg-dark.text-white {
-  background-color: #343a40; /* Color de fondo oscuro en el tema oscuro */
-  color: #ffffff; /* Color del texto en el tema oscuro */
-}
-
 /* Productos */
-/*
+
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -126,7 +127,7 @@ a:link {
 .producto-detalle-info h3 {
   font-size: 2rem;
 }
-*/
+
 /* Detail */
 
 .categoria {
@@ -151,7 +152,7 @@ a:link {
 .item-count button,
 .agregar-al-carrito,
 .enviar {
-  background-color: var(--clr-main);
+  background-color: var(--clr-background);
   border: 0;
   width: 2rem;
   height: 2rem;
@@ -201,4 +202,37 @@ a:link {
   outline: 0;
   border: 2px solid var(--clr-main);
   outline: 2px solid var(--clr-main);
+}
+
+/* Ejemplo de estilos para el tema oscuro */
+.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Ejemplo de estilos para botones en el tema oscuro */
+.dark-theme .btn {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Ejemplo de estilos para enlaces en el tema oscuro */
+.dark-theme a {
+  color: #00bfff; /* Color de enlace en el tema oscuro */
+}
+
+/* Estilos para botones de contorno en el tema oscuro */
+.dark-theme .btn-outline-dark {
+  border-color: #ffffff; /* Color del borde en el tema oscuro */
+  color: #ffffff; /* Color del texto en el tema oscuro */
+}
+
+/* Establece un fondo de botón oscuro para mayor contraste si es necesario */
+.dark-theme .btn-outline-dark {
+  background-color: #333333;
+}
+
+.dark-theme .badge.bg-dark.text-white {
+  background-color: #343a40; /* Color de fondo oscuro en el tema oscuro */
+  color: #ffffff; /* Color del texto en el tema oscuro */
 }
