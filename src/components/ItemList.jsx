@@ -7,7 +7,7 @@ const ItemList = ({ productos, titulo }) => {
         <section id={titulo} className="py-0">
             <div className="container">
                 <div id="catalogo" className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    {productos.map((prod) => <Item producto={prod} key={prod.id} />)}
+                    {productos.map((prod) => <Item producto={prod} seeMore={true} key={prod.id} />)}
                 </div>
             </div>
         </section>

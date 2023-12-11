@@ -3,12 +3,12 @@ import * as React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import Navbar from './components/Navbar';
-import Contact from "./components/Contact";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";
-import AboutUs from "./components/AboutUs";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
+import AboutUs from "./components/pages/AboutUs";
+import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
+import Contact from "./components/pages/Contact";
 
 function App() {
 
