@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter basename="/React-Final">
         <Navbar />
         <Routes>
-          <Route exact path="/" component={ItemListContainer} />
+          {/* <Route exact path="/" component={ItemListContainer} /> */}
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/product" element={<ItemListContainer />} />
