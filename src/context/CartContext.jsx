@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-
+import { toast } from "react-hot-toast";
 export const CartContext = createContext();
 
 const carritoInit = JSON.parse(localStorage.getItem("cart")) || [];
@@ -23,6 +23,30 @@ export const CartProvider = ({ children }) => {
             newCart.push(newItem);
         }
         setCart(newCart);
+
+        toast(`Se ha agregado el item "${item.name}" al carrito`, {
+            duration: 2000,
+            position: "top-right",
+
+            // Styling
+            style: {},
+            className: '',
+
+            // Custom Icon
+            icon: '👏',
+
+            // Change colors of success/error/loading icon
+            iconTheme: {
+                primary: '#000',
+                secondary: '#fff',
+            },
+
+            // Aria
+            ariaProps: {
+                role: 'status',
+                'aria-live': 'polite',
+            },
+        });
     }
 
     const countInCart = () => {

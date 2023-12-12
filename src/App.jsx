@@ -9,6 +9,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
 import Contact from "./components/pages/Contact";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
+      <Toaster />
     </CartProvider>
   )
 }
