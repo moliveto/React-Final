@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://moliveto.github.io/React-Final",
+  "homepage": "https://moliveto.github.io/react-final",
   "scripts": {
     "dev": "vite --config vite.config.js",
     "build": "vite build",

@@ -16,7 +16,7 @@ function App() {
   return (
     <CartProvider>
       {/* <BrowserRouter> */}
-      <BrowserRouter basename="/React-Final">
+      <BrowserRouter basename="/react-final">
         <Navbar />
         <Routes>
           {/* <Route exact path="/" component={ItemListContainer} /> */}
