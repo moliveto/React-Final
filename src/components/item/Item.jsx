@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import ItemRating from './ItemRating'
 import ItemPrice from './ItemPrice'
 import ItemMore from './ItemMore'
@@ -37,8 +37,8 @@ const Item = ({ producto: item, seeMore }) => {
                             <small className="text-body-secondary">Stock {item.stock}</small>
                         </div>
                     </div>
-                    {/* <div className="flex space-x-4 mb-6 text-sm font-medium"> */}
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {/* <div classNamestyle={{ display: 'flex', alignItems: 'center' }}> */}
+                    <div className="col-md-12 text-center">
                         <ItemQuantitySelector cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} />
                         <AddItemButton cantidad={cantidad} handleAgregar={() => { addToCart(item, cantidad) }} />
                     </div>
